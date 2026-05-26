@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import connectDb from "./config/db.js";
 import orderRoute from "./routes/orderRoute.js";
+import authRoute from "./routes/authRoute.js";
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/order", orderRoute);
+app.use("/api/auth",authRoute)
 
 const PORT = process.env.PORT || 3000;
 
