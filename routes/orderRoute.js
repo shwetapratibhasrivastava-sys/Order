@@ -6,7 +6,7 @@ import {
   getOrderById,
   updateOrder,
 } from "../controllers/orderController.js";
-import authMiddleware from "../middleware/authMiddleware.js""
+import authMiddleware from "../middleware/authMiddleware.js"
 const orderRoute = express.Router();
 
 orderRoute.post("/", createOrder);
